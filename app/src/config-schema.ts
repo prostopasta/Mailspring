@@ -29,7 +29,9 @@ export default {
         properties: {
           checkAutomatically: {
             type: 'boolean',
-            default: true,
+            // Off in this personal build: Squirrel.Windows would silently replace it with the
+            // official release and drop the fork's patches. "Check for Updates" still works.
+            default: false,
             title: localized('Automatically check for updates'),
           },
         },
